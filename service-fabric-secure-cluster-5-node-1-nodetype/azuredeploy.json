@@ -494,18 +494,20 @@
                 }
               },
               {
-                "name": "AppInstall",
+                "name": "customScript",
                 "properties": {
-                  "publisher": "Microsoft.Azure.Extensions",
-                  "type": "CustomScript",
-                  "typeHandlerVersion": "2.0",
-                  "autoUpgradeMinorVersion": true,
+                  "publisher": "Microsoft.Compute",
                   "settings": {
                     "fileUris": [
                       "https://raw.githubusercontent.com/maybevs/UselessScripts/master/WriteFile.ps1"
-                    ],
-                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File WriteFile.ps1"
-                  }
+                    ]
+                  },
+                  "typeHandlerVersion": "1.8",
+                  "autoUpgradeMinorVersion": true,
+                  "protectedSettings": {
+                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File helloWorld.ps1"
+                  },
+                  "type": "CustomScriptExtension"
                 }
               }
             ]
