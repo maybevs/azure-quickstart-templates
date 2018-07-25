@@ -492,6 +492,21 @@
                   },
                   "typeHandlerVersion": "1.5"
                 }
+              },
+              {
+                "name": "AppInstall",
+                "properties": {
+                  "publisher": "Microsoft.Azure.Extensions",
+                  "type": "CustomScript",
+                  "typeHandlerVersion": "2.0",
+                  "autoUpgradeMinorVersion": true,
+                  "settings": {
+                    "fileUris": [
+                      "https://raw.githubusercontent.com/maybevs/UselessScripts/master/WriteFile.ps1"
+                    ],
+                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File WriteFile.ps1"
+                  }
+                }
               }
             ]
           },
